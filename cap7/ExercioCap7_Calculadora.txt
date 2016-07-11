@@ -1,0 +1,8 @@
+Crie a Classe Calculadora com quatro métodos
+onde cada um faça a função das quatro operações
+básicas da matemática.
+
+Crie a Classe UsaCalculadora para testar estas operações
+
+Obs.: não haverá interface visual, os testes serão feitos pelo
+         System.out.println
