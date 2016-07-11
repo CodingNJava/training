@@ -1,0 +1,35 @@
+No pacote cap11, faça os exemplos abaixo.
+
+Criar a classe ExemplosimplesCriacaoArray que contenha dois arrays:
+
+* um chamado codigos para guardar os números 1,2,3,4 e
+
+* outro chamado nomes para guardar Ana, Bete, Cida, João e Pedro.
+
+Usando o System.out.println mostre as informações de ambos arrays
+
+
+------------------------------------------------------------------------------------------------------
+/*
+* Crie duas Classes: Pessoa e UsaPessoa
+* 
+* 1) A classe Pessoa deve conter os atributos nome, altura e peso. Os métodos getters e setters e o método mostrarDados()
+* 
+* Obs: o Construtor deverá permanecer o padrão, ou seja, "não mecha com isto agora, rsrs..."
+* 
+* 2) Na classe UsaPessoa, crie um array chamado pessoas para guardar dois objetos do tipo Pessoa
+*    Invoque o método mostrarDados() para mostras informações destes objetos na tela.
+*    A saída deverá ser conforme abaixo:
+*    
+Nome: Maria
+Peso: 55.0
+Altura: 1.68
+------------------------------------------
+Nome: José
+Peso: 60.0
+Altura: 1.77
+------------------------------------------
+
+* 
+*
+*/

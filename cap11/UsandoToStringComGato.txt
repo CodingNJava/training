@@ -1,0 +1,5 @@
+Crie a classe Gato, com os atributos encapsulados nome e idade. Métodos getters e setters
+e método mostrarDados()
+
+Crie a classe UsaGato, contendo o método main. Crie dois objetos gato, atribua valores e
+mostre as informações
