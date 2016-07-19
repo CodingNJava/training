@@ -1,0 +1,9 @@
+Exception
+
+tudo que retornar ADD THROWS... tem que ser colocado em try and catch
+
+Programação funcional atráves de lâmbda.
+
+consiste em lançar a operação diretamente no objeto de referencia elimando assim o uso de uma classe apenas para aquela função determinada. Basicamente é isso.
+
+conjunto de sinais para o Lambda é ->
