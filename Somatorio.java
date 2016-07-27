@@ -19,7 +19,7 @@ public class Somatorio extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtNum1;
 	private JTextField txtNum2;
-
+	JLabel lblSoma = new JLabel("");
 	/**
 	 * Launch the application.
 	 */
@@ -139,7 +139,7 @@ public class Somatorio extends JFrame {
 		contentPane.add(lblResultado);
 		
 		//---------------------------------------------------
-		JLabel lblSoma = new JLabel("");
+	//	JLabel lblSoma = new JLabel("");
 		lblSoma.setForeground(new Color(51, 51, 51));
 		lblSoma.setFont(new Font("Calibri", Font.BOLD, 16));
 		lblSoma.setBounds(172, 165, 90, 20);
