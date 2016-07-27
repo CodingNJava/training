@@ -1,20 +1,18 @@
-package extra;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-
-import java.awt.SystemColor;
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Somatorio extends JFrame {
 
@@ -46,9 +44,11 @@ public class Somatorio extends JFrame {
 		setTitle("Somat\u00F3rio");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+		
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(153, 204, 255));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(BorderFactory.createCompoundBorder());
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -80,19 +80,8 @@ public class Somatorio extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				try {
-					System.out.println("oiiiieeee");
-//					Somar();
-					double valor1 = Double.parseDouble(txtNum1.getText());
-					double valor2 = Double.parseDouble(txtNum2.getText());
-					
-					
-					Double resultado = 0.00;
-					resultado = valor1 + valor2;
-					
-//					lblSoma.setText(resultado.toString());
-					
-					lblSoma.setText(resultado.toString());
+			    try{
+			      somar();
 					
 				} catch (Exception e2) {
 					e2.printStackTrace();
@@ -109,17 +98,16 @@ public class Somatorio extends JFrame {
 		contentPane.add(btnSomar);
 		
 		
-		//---------------------------------------------------------------
+		//----------------------------------------------------------------
 		JButton btnLimpar = new JButton("Limpar");
 		//limpando os dados dos campos
 		btnLimpar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				limparCampos();
-				txtNum1.setText("");
-				txtNum2.setText("");
 			}
 		});
+		
 		btnLimpar.setBackground(new Color(0, 51, 153));
 		btnLimpar.setForeground(new Color(255, 255, 255));
 		btnLimpar.setFont(new Font("Calibri", Font.BOLD, 12));
@@ -128,6 +116,15 @@ public class Somatorio extends JFrame {
 		
 		//------------------------------------------------------------------
 		JButton btnSair = new JButton("Fechar");
+		
+		//limpando os dados dos campos--------------------------------------
+		btnSair.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				sair();
+			}
+		});
+		
 		btnSair.setBackground(new Color(0, 51, 153));
 		btnSair.setForeground(new Color(255, 255, 255));
 		btnSair.setFont(new Font("Calibri", Font.PLAIN, 12));
@@ -151,7 +148,8 @@ public class Somatorio extends JFrame {
 	
 	JLabel lblSoma = new JLabel("");
 		
-	public void Somar(){
+	public void somar(){
+		
 		double valor1 = Double.parseDouble(txtNum1.getText());
 		double valor2 = Double.parseDouble(txtNum2.getText());
 		
@@ -159,17 +157,17 @@ public class Somatorio extends JFrame {
 		Double resultado = 0.00;
 		resultado = valor1 + valor2;
 		
-		lblSoma.setName(resultado.toString());
+		lblSoma.setText(resultado.toString());
 				
 	}
 	
 	public void limparCampos(){
-		txtNum1.setName("");
-		txtNum2.setName("");
+		txtNum1.setText("");
+		txtNum2.setText("");
 	}
 	
 	
-	public void Sair(){
+	public void sair(){
 		System.exit(0);
 	}
 	
